@@ -1,9 +1,14 @@
+import sys
 import os
+
+# Добавляем путь к корню проекта в системный путь
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "prs_project.settings")
 
 import django
 django.setup()
+
 
 from collections import defaultdict
 from itertools import combinations
